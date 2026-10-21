@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Política de Privacidade do CapiReps — app de treino 100% offline da Capivara Studios."
+    />
+    <title>Política de Privacidade — CapiReps</title>
+    <style>
+      :root {
+        --brand: #d97736;
+        --brand-dark: #b85f24;
+        --brand-soft: #f6e6d6;
+        --cream: #f7f2ea;
+        --ink: #2a201a;
+        --muted: #6b5d52;
+        --line: #e6dccf;
+        --card: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: 'Nunito', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+      }
+      a { color: var(--brand-dark); }
+      .wrap { max-width: 780px; margin: 0 auto; padding: 32px 20px 56px; }
+      header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+      .badge {
+        width: 54px; height: 54px; border-radius: 16px;
+        background: linear-gradient(160deg, #3f332e, #231f1d);
+        display: flex; align-items: center; justify-content: center;
+        color: #f4a261; font-weight: 800; font-size: 20px;
+        box-shadow: 0 6px 18px rgba(42, 32, 26, 0.18);
+      }
+      h1 { font-size: 24px; margin: 0; }
+      .sub { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
+      .lang { margin-left: auto; display: flex; gap: 6px; }
+      .lang button {
+        border: 1px solid var(--line); background: var(--card); color: var(--ink);
+        border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 700;
+        cursor: pointer;
+      }
+      .lang button.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+      .card {
+        background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+        padding: 22px 22px; margin-top: 18px;
+      }
+      h2 { font-size: 16px; margin: 22px 0 6px; }
+      h2:first-child { margin-top: 0; }
+      p, li { color: var(--ink); font-size: 15px; }
+      .muted { color: var(--muted); }
+      ul { padding-left: 20px; margin: 6px 0; }
+      .pill {
+        display: inline-block; background: var(--brand-soft); color: var(--brand-dark);
+        border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 700;
+        margin-bottom: 8px;
+      }
+      footer { margin-top: 22px; color: var(--muted); font-size: 12px; text-align: center; }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="badge">CR</div>
+        <div>
+          <h1>Política de Privacidade</h1>
+          <p class="sub">CapiReps · Capivara Studios · Atualizado em 21/10/2026</p>
+        </div>
+        <div class="lang">
+          <button id="btn-pt" class="active" onclick="setLang('pt')">PT</button>
+          <button id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+      </header>
+
+      <section id="pt" class="card">
+        <span class="pill">100% offline · sem login · sem anúncios</span>
+        <h2>Sobre</h2>
+        <p>
+          O CapiReps é um aplicativo de registro de treinos de musculação que funciona
+          100% no seu aparelho. Não há cadastro, login, servidores ou serviços de nuvem
+          operados por nós.
+        </p>
+        <h2>Dados armazenados</h2>
+        <p>
+          Treinos, rotinas, exercícios, séries (carga, repetições, RPE), recordes, XP,
+          níveis, ofensiva, conquistas, peso corporal, preferências (tema, sons, vibração)
+          e configurações. Tudo fica armazenado localmente no dispositivo (SQLite e
+          armazenamento local do app).
+        </p>
+        <h2>Coleta e compartilhamento</h2>
+        <p>
+          Não coletamos, não transmitimos e não compartilhamos seus dados pessoais. O app
+          funciona sem internet. Não usamos analytics, rastreamento nem publicidade.
+        </p>
+        <h2>Backup e exportação</h2>
+        <p>
+          Você pode exportar seus dados em um arquivo JSON e compartilhá-lo por onde
+          quiser. Essa ação é iniciada por você, pelo compartilhamento do sistema. Nenhum
+          backup é enviado automaticamente para servidores.
+        </p>
+        <h2>Notificações, sons e vibração</h2>
+        <p>São locais, gerados no próprio aparelho. Nenhum servidor é usado.</p>
+        <h2>Exclusão de dados</h2>
+        <p>
+          Ao limpar os dados do app (Ajustes → Apagar todos os dados) ou desinstalá-lo, os
+          dados locais são removidos. Como não temos servidores, não há dados nossos para
+          excluir.
+        </p>
+        <h2>Crianças</h2>
+        <p>O app não é direcionado a crianças e não coleta dados de menores.</p>
+        <h2>Contato</h2>
+        <p>Dúvidas sobre privacidade: <a href="mailto:contato.capistudios@gmail.com">contato.capistudios@gmail.com</a>.</p>
+      </section>
+
+      <section id="en" class="card" hidden>
+        <span class="pill">100% offline · no login · no ads</span>
+        <h2>About</h2>
+        <p>
+          CapiReps is a strength-training log that runs 100% on your device. There is no
+          sign-up, login, server or cloud service operated by us.
+        </p>
+        <h2>Stored data</h2>
+        <p>
+          Workouts, routines, exercises, sets (weight, reps, RPE), records, XP, levels,
+          streak, achievements, body weight, preferences (theme, sound, haptics) and
+          settings. Everything is stored locally on the device (SQLite and local app
+          storage).
+        </p>
+        <h2>Collection and sharing</h2>
+        <p>
+          We do not collect, transmit or share your personal data. The app works without
+          internet. We do not use analytics, tracking or advertising.
+        </p>
+        <h2>Backup and export</h2>
+        <p>
+          You can export your data as a JSON file and share it anywhere. This action is
+          initiated by you through the system share sheet. No backup is sent to servers
+          automatically.
+        </p>
+        <h2>Notifications, sounds and haptics</h2>
+        <p>They are local, generated on the device. No server is used.</p>
+        <h2>Data deletion</h2>
+        <p>
+          Clearing the app data (Settings → Delete all data) or uninstalling the app
+          removes local data. Since we have no servers, there is no data of ours to delete.
+        </p>
+        <h2>Children</h2>
+        <p>The app is not directed to children and does not collect data from minors.</p>
+        <h2>Contact</h2>
+        <p>Privacy questions: <a href="mailto:contato.capistudios@gmail.com">contato.capistudios@gmail.com</a>.</p>
+      </section>
+
+      <footer>© Capivara Studios · CapiReps</footer>
+    </div>
+
+    <script>
+      function setLang(lang) {
+        document.getElementById('pt').hidden = lang !== 'pt';
+        document.getElementById('en').hidden = lang !== 'en';
+        document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      }
+    </script>
+  </body>
+</html>
