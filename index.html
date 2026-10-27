@@ -71,7 +71,7 @@
         <div class="badge">CR</div>
         <div>
           <h1>Política de Privacidade</h1>
-          <p class="sub">CapiReps · Capivara Studios · Atualizado em 21/10/2026</p>
+          <p class="sub">CapiReps · Capivara Studios · Atualizado em 27/10/2026</p>
         </div>
         <div class="lang">
           <button id="btn-pt" class="active" onclick="setLang('pt')">PT</button>
@@ -89,10 +89,27 @@
         </p>
         <h2>Dados armazenados</h2>
         <p>
-          Treinos, rotinas, exercícios, séries (carga, repetições, RPE), recordes, XP,
-          níveis, ofensiva, conquistas, peso corporal, preferências (tema, sons, vibração)
-          e configurações. Tudo fica armazenado localmente no dispositivo (SQLite e
-          armazenamento local do app).
+          Treinos, rotinas, exercícios, séries (carga, repetições, tempo, distância,
+          RPE, observações), observações do treino, check-in autorrelato de prontidão e
+          dificuldade, duração adaptada da sessão, perfis de equipamento (barra e
+          estoque de anilhas), metas semanais por músculo, recordes, XP,
+          níveis, ofensiva, conquistas, missões pessoais e seus recibos de conclusão, peso corporal, preferências e configurações (tema,
+          unidade kg/lb e idioma da interface, português ou inglês).
+          Saúde é opcional: altura, idade declarada com data de referência, pesos,
+          circunferências, lado, origem, data/fuso conhecidos e observações de medição,
+          além de laudos externos de bioimpedância digitados manualmente (aparelho,
+          método, métricas corporais, condições e observações). Também podem existir
+          metas opcionais definidas por você ou por orientação profissional (energia,
+          água, bebidas ou faixa de peso, com histórico de versões), catálogo manual de
+          alimentos e receitas, registros de refeições (descrição, kcal, macros e
+          porção), bebidas (volume, categoria e descrição) e a confirmação do dia.
+          A estimativa de gasto em repouso usa peso, altura, idade e parâmetro informado,
+          calculada no aparelho. O celular não mede composição corporal e o app não se
+          conecta a aparelhos. Não mede nem diagnostica condições de saúde e não
+          prescreve dieta. Tudo fica em SQLite e armazenamento local. A revisão e o
+          relatório de Saúde são gerados no próprio aparelho a partir desses registros;
+          o relatório é um arquivo temporário compartilhado só por ação sua.
+          O app não oferece criptografia própria do banco nem bloqueio biométrico.
         </p>
         <h2>Coleta e compartilhamento</h2>
         <p>
@@ -101,17 +118,69 @@
         </p>
         <h2>Backup e exportação</h2>
         <p>
-          Você pode exportar seus dados em um arquivo JSON e compartilhá-lo por onde
-          quiser. Essa ação é iniciada por você, pelo compartilhamento do sistema. Nenhum
-          backup é enviado automaticamente para servidores.
+          Você escolhe exportar e compartilhar um JSON completo pelo sistema. Ele inclui
+          Saúde, observações de treino e de série, check-in do treino, duração adaptada,
+          perfis de equipamento, alternativas curadas, metas semanais por músculo, metas,
+          catálogo de alimentos, receitas, refeições, bebidas, confirmações do dia,
+          missões pessoais e seus recibos de conclusão, mesmo com resumos ocultos, e não é
+          criptografado. Quem o
+          receber poderá ler seus dados. Confira o destino e se o arquivo foi salvo.
+          Importar exige prévia e confirmação: substitui todos os dados; um backup antigo
+          sem metas por músculo, observações de série, Saúde, metas, consumo, catálogo,
+          receitas, confirmações, missões ou perfis de equipamento apaga os registros atuais
+          dessas áreas.
         </p>
-        <h2>Notificações, sons e vibração</h2>
-        <p>São locais, gerados no próprio aparelho. Nenhum servidor é usado.</p>
+        <p>
+          O CapiReps não envia backups automaticamente. O sistema operacional pode copiar
+          ou transferir dados conforme o fabricante e suas configurações. Offline não
+          garante exclusão de backups do sistema. A cópia de importação no cache é removida
+          após a leitura, sem apagar o original. Cópias temporárias de exportação (backup,
+          CSV, planos e cards) e relatórios de Saúde com mais de 24 horas são removidos na
+          próxima exportação. Falha ao compartilhar remove a cópia recém-criada. Relatórios
+          de Saúde não são enviados pelo app a servidores.
+        </p>
+        <p>
+          Além do backup, você pode exportar outros três arquivos, sempre por ação sua e
+          pelo seletor do sistema, e quem os receber poderá lê-los. O CSV do histórico traz
+          uma linha por série, com datas, carga, repetições, tempo, distância, RPE e as
+          observações que você escreveu; contém só dados de treino, nenhum registro de
+          Saúde entra no arquivo. O arquivo de plano em JSON traz a estrutura de rotinas,
+          blocos e programas com os exercícios e séries necessários, sem histórico, peso,
+          medidas, exames, alimentação, metas de Saúde, conquistas nem XP; importar um plano
+          cria cópias novas do que você marcou e nunca substitui nem apaga o que já existe,
+          e escolher o arquivo não altera nada até você conferir a prévia e confirmar. A
+          imagem do card de sessão é gerada no aparelho a partir de um treino finalizado e
+          mostra apenas os blocos que você ligou em Ajustes → Card de sessão (data, duração,
+          volume, séries, XP, ofensiva, recordes, lista de exercícios, marca e, se você
+          ligar essa opção, a observação do treino); dados de Saúde nunca aparecem no card.
+        </p>
+        <p>
+          Ao apagar somente Saúde, são removidos backups e relatórios temporários; CSVs,
+          planos e cards são dados de treino e ficam preservados. Ao apagar todos os dados,
+          todas essas cópias temporárias são removidas.
+        </p>
+        <h2>Notificações, lembretes e widget</h2>
+        <p>
+          Sons, vibração e notificações são locais, gerados no próprio aparelho. Nenhum
+          servidor é usado. Os lembretes de treino e de registro são <strong>opcionais</strong>,
+          nascem desligados e só passam a existir depois de você conceder a permissão do
+          sistema. O texto do aviso usa só rótulos fixos: nenhum título de rotina, observação,
+          exercício ou valor de Saúde aparece na tela bloqueada. O widget da tela inicial também
+          é opcional e desligado por padrão; quando você liga, ele mostra o próximo passo do seu
+          plano (o dia e o título da rotina) dentro do aplicativo da tela inicial do aparelho.
+          Nada disso é enviado por nós, e desligar limpa o conteúdo do widget.
+        </p>
         <h2>Exclusão de dados</h2>
         <p>
-          Ao limpar os dados do app (Ajustes → Apagar todos os dados) ou desinstalá-lo, os
-          dados locais são removidos. Como não temos servidores, não há dados nossos para
-          excluir.
+          Saúde → Apagar Saúde remove perfil, pesos (inclusive antigos), medidas, exames
+          de bioimpedância, metas, catálogo de alimentos, receitas, refeições, bebidas,
+          confirmações do dia e backups/relatórios temporários;
+          preserva treinos, XP, missões pessoais, perfis de equipamento e preferências. Ao apagar um exame vinculado, você escolhe
+          se a pesagem associada também será removida. A força relativa fica sem
+          referência. Registros também podem ser editados/apagados individualmente.
+          Ajustes → Apagar todos os dados ou desinstalar remove os dados locais do app.
+          A exclusão é lógica, não garantia de apagamento forense. Cópias externas e
+          backups do sistema não são revogados; gerencie-os separadamente.
         </p>
         <h2>Crianças</h2>
         <p>O app não é direcionado a crianças e não coleta dados de menores.</p>
@@ -128,10 +197,27 @@
         </p>
         <h2>Stored data</h2>
         <p>
-          Workouts, routines, exercises, sets (weight, reps, RPE), records, XP, levels,
-          streak, achievements, body weight, preferences (theme, sound, haptics) and
-          settings. Everything is stored locally on the device (SQLite and local app
-          storage).
+          Workouts, routines, exercises, sets (weight, reps, time, distance, RPE, notes),
+          workout notes, optional self-reported readiness/difficulty check-in, reduced
+          session duration, equipment profiles (bar and plate inventory),
+          weekly muscle goals, records, XP, levels,
+          streak, achievements, personal missions and their completion receipts, body weight,
+          preferences and settings (theme, kg/lb unit
+          and interface language, Portuguese or English). Optional Health
+          records include height, declared age and reference date, weight, circumferences,
+          side, source, known measurement date/time zone and method notes, plus manually
+          entered external bioimpedance reports (device, method, body metrics, conditions
+          and notes). Optional goals (energy, water, beverages or weight range, with
+          version history), a manual food and recipe catalog, meal entries (description,
+          kcal, macros and portion), beverage entries (volume, category and description)
+          and day confirmations may also be stored. The resting-energy
+          estimate uses weight, height, age and the declared parameter, calculated on the
+          device. The phone does not measure body composition and the app does not connect
+          to devices. These records are not diagnoses or automatic measurements, and the
+          app does not prescribe a diet. Data stays in SQLite and local storage. Health
+          reviews and reports are generated on the device from these records; a report is
+          a temporary file shared only through your action. The app
+          provides no database encryption of its own or biometric lock.
         </p>
         <h2>Collection and sharing</h2>
         <p>
@@ -140,16 +226,69 @@
         </p>
         <h2>Backup and export</h2>
         <p>
-          You can export your data as a JSON file and share it anywhere. This action is
-          initiated by you through the system share sheet. No backup is sent to servers
-          automatically.
+          You choose to export and share a complete JSON backup through the system.
+          It includes Health data, workout and set notes, workout check-in, reduced
+          session duration, equipment profiles, curated alternatives, weekly muscle goals,
+          goals, food and recipe catalog, meals, beverages
+          and day confirmations, personal missions and their completion receipts — even when
+          summaries are hidden — and is not encrypted.
+          Recipients can read it. Check the destination and that the file was saved.
+          Import requires a preview and confirmation: it replaces all local data. Older
+          backups without muscle goals, set notes, Health, goals, consumption, catalog,
+          recipes, confirmations, missions or equipment profiles erase the current records in those
+          areas.
         </p>
-        <h2>Notifications, sounds and haptics</h2>
-        <p>They are local, generated on the device. No server is used.</p>
+        <p>
+          CapiReps does not send backups automatically. Your operating system may back up
+          or transfer data depending on the manufacturer and your settings. Offline use
+          does not exclude system backups. Cached import copies are removed after reading,
+          without deleting the original. Temporary export copies (backup, CSV, plans and
+          cards) and Health reports older than 24 hours are removed on the next export.
+          Failed sharing removes the newly created copy. Health reports are not sent to
+          servers by the app.
+        </p>
+        <p>
+          Besides the backup, you can export three other files, always through your own
+          action and the system share sheet, and whoever receives them can read them. The
+          history CSV holds one row per set, with dates, weight, reps, time, distance, RPE
+          and the notes you wrote; it contains training data only, and no Health record
+          goes into the file. The JSON plan file holds the structure of routines, blocks
+          and programs with the exercises and sets they need, without history, body weight,
+          measurements, exams, food, Health goals, achievements or XP; importing a plan
+          creates new copies of what you selected, never replaces or deletes existing data,
+          and choosing the file changes nothing until you review the preview and confirm.
+          The session card image is generated on your device from a finished workout and
+          shows only the blocks you enabled in Settings → Session card (date, duration,
+          volume, sets, XP, streak, records, exercise list, brand and, if you enable that
+          option, the workout note); Health data never appears on a card.
+        </p>
+        <p>
+          Deleting Health only removes temporary backups and reports; CSVs, plans and cards
+          are training data and stay preserved. Deleting all data removes every one of those
+          temporary copies.
+        </p>
+        <h2>Notifications, reminders and widget</h2>
+        <p>
+          Sounds, haptics and notifications are local, generated on the device. No server is
+          used. Workout and logging reminders are <strong>optional</strong>, start disabled and
+          only exist after you grant the system permission. Their text uses fixed labels only:
+          no routine title, note, exercise or Health value appears on the lock screen. The
+          home-screen widget is also optional and off by default; when you enable it, it shows
+          your next planned step (the day and the routine title) inside your device's launcher
+          app. None of this is sent by us, and turning the widget off clears its content.
+        </p>
         <h2>Data deletion</h2>
         <p>
-          Clearing the app data (Settings → Delete all data) or uninstalling the app
-          removes local data. Since we have no servers, there is no data of ours to delete.
+          Health → Delete Health removes the Health profile, all weights (including older
+          records), measurements, bioimpedance exams, goals, food and recipe catalog,
+          meals, beverages, day confirmations and temporary backups/reports, preserving
+          workouts, XP, personal missions, equipment profiles and preferences. When deleting
+          a linked exam, you choose whether the associated weigh-in is also removed.
+          Relative strength then has no body-weight reference. Individual records can also
+          be edited or deleted.
+          Settings → Delete all data or uninstalling removes local app data. Deletion is
+          logical, not guaranteed forensic erasure.
+          External copies and system backups are not revoked; manage them separately.
         </p>
         <h2>Children</h2>
         <p>The app is not directed to children and does not collect data from minors.</p>
